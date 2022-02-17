@@ -1,63 +1,50 @@
 body {
     background: #232529;
+    margin: 0;
+    min-height: 100%;
+
+    display: flex;                           /*Принцып роботы понял но там еще читать и читать*/
+    justify-content: center;                 /*Центр главной оси*/
+    align-items: center;                     /*Центр поперечной оси*/
 }
- form.result {
-     margin-left: 530px;
-     padding: 20px;
-
- }
-
- form.but {
-     margin-left: 480px;
- }
-
-input {
+.calc {
+    width: 600px;
+    border: none;
     background-color: #232529;
-    border: 0px solid #4CAF50;
-    color: white;
-    text-align: center;
-    width: 400px;
-    font-size: 50px;
+    padding: 20px;
+    display: grid;                         /*// двумерная_сетка*/
+    grid-template-columns: repeat(4,1fr);  /*// колонки_4х4_одинаковые*/
+    grid-auto-rows: 80px;                  /*// Размер_рядов_по_умолчанию*/
+    gap: 20px;                            /* // Отступы_между_елементами*/
 }
 
-
-button {
-    margin: 10px;
-    background-color: #232529; /* Green */
-    border: 0px solid #4CAF50;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    min-width: 2.1em;
+.calc_result {
+    grid-column: 1 / -1;                   /*Ширина от первой до последней линии грида (тоже перечитать нужно что бы не путатся)*/
+    background: #232529;
+    color: beige;
     font-size: 50px;
-    outline: none;
+    padding: 10px;                         /*внутренние поля */
+    text-align: center;
+    font-family: Arial
+}
+
+.calc_btn {
+    border: none;
+    background: #232529;
+    color: beige;
+    font-size: 50px;
     cursor: pointer;
-    display: inline-block;
-
 }
 
-button:hover {background-color: #3c3f41}
+.calc_btn:hover {                     /*Поведение при навидении*/
+    color: #3c3f41;                   /*Чет теперь роботает но не так*/
+}
 
-button:active {
-    background-color: #3c3f41;
+.calc_btn:active {                    /*Поведение при нажатии*/
+    background-color: #3c3f41;        /*Онологично с ховером*/
     transform: translateY(4px);
 }
 
 
 
-button.button_1.button_2.button_3.button_c {
 
-}
-
-button.button_4.button_5.button_6.button_plus {
-
-}
-
-button.button_7.button_8.button_9.button_minus {
-
-}
-
-button.button_mult.button_0.button_division.button_equals {
-
-}

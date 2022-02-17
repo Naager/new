@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link  href="style.css" rel="stylesheet">
-    <script src="script.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
@@ -10,53 +10,35 @@
 </head>
 <body>
 
-<form name="result" class="result">
-    <input type="text" size="20" placeholder="0" >
-</form>
 
-<form name="but" class="but">
 
-<div>
-    <button class="button_1">1</button>
+<div class="calc">
 
-    <button class="button_2">2</button>
+    <output class="calc_result" id="result">0</output>
 
-    <button class="button_3">3</button>
+    <button type="button" class="calc_btn one">1</button>
+    <button type="button" class="calc_btn two">2</button>
+    <button type="button" class="calc_btn three">3</button>
+    <button type="button" class="calc_btn clearAll">ac</button>
 
-    <button class="button_c">C</button>
+    <button type="button" class="calc_btn four">4</button>
+    <button type="button" class="calc_btn five">5</button>
+    <button type="button" class="calc_btn six">6</button>
+    <button type="button" class="calc_btn plus">+</button>
+
+    <button type="button" class="calc_btn seven">7</button>
+    <button type="button" class="calc_btn eight">8</button>
+    <button type="button" class="calc_btn nine">9</button>
+    <button type="button" class="calc_btn minus">-</button>
+
+    <button type="button" class="calc_btn multipli">*</button>
+    <button type="button" class="calc_btn zero">0</button>
+    <button type="button" class="calc_btn division">/</button>
+    <button type="button" class="calc_btn equals">=</button>
+
 </div>
 
-<div>
-    <button class="button_4">4</button>
-
-    <button class="button_5">5</button>
-
-    <button class="button_6">6</button>
-
-    <button class="button_plus">+</button>
-</div>
-
-<div>
-    <button class="button_7">7</button>
-
-    <button class="button_8">8</button>
-
-    <button class="button_9">9</button>
-
-    <button class="button_minus">-</button>
-</div>
-
-<div>
-    <button class="button_mult">*</button>
-
-    <button class="button_0">0</button>
-
-    <button class="button_division">/</button>
-
-    <button class="button_equals">=</button>
-</div>
-
-</form>
+<script src="script.js"></script>
 
 </body>
 </html>
