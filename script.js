@@ -5,7 +5,7 @@ let sign = '';
 let finish = false;
 
 const digit = ['1', '2', '3', '4', '5', '6', '7', '8', '9',' 0'];
-const action =['-', '+', 'x', '/'];
+const action =['-', '+', '*', '/'];
 
 
 const out = document.querySelector('.calc_result');
@@ -28,8 +28,9 @@ document.querySelector('.calc').addEventListener('click', event => { /*Пове�
        sign = '';
        finish = false;
        out.textContent = 0;
+       return;
    };
-   if (event.target.classList.contains("ac")) return;                                    /* Нажатие кнопки АС не вносит символы в переменную*/
+   if (event.target.classList.contains("clearAll")) return;                                    /* Нажатие кнопки АС не вносит символы в переменную*/
    out.textContent = '';
    let key = event.target.textContent;
 
@@ -37,7 +38,7 @@ document.querySelector('.calc').addEventListener('click', event => { /*Пове�
        if (b === '' && sign === '') {
 
        a += key;
-       console.log(a, b, sign);
+
        out.textContent = a;
        }
        else if (a !== '' && b !== '' && finish) {                                        /* Если переменные 'a' и 'b' не пустые и нажато '='  найденое значение присваивается 'a' */
@@ -53,11 +54,13 @@ document.querySelector('.calc').addEventListener('click', event => { /*Пове�
            console.log(a, b, sign);
            return;
    }
-
+console.log(4)
    if (action.includes(key)){
+       console.log(4)
        sign = key;
-       console.log(a, b, sign);
+
        out.textContent = sign;
+       return;
    }
    if (key === '=') {                                                                   /* Равно и вычисления*/
        if (b === '') b = a;                                                             /* Если 'b' равно пустой строке то 'b' присвоить значение 'a' */
@@ -69,7 +72,9 @@ document.querySelector('.calc').addEventListener('click', event => { /*Пове�
                a = a - b;
                break;
            case "*":
+               console.log (1);
                a = a * b;
+
                break;
            case "/":
                if (b === '0') {                                                          /* 0 x 0 */
@@ -85,7 +90,7 @@ document.querySelector('.calc').addEventListener('click', event => { /*Пове�
 
        finish = true;
        out.textContent = a;
-       console.log(a, b, sign);
+
    }
 
 });
