@@ -51,12 +51,12 @@ document.querySelector('.calc').addEventListener('click', event => { /*Пове�
            b += key;
            out.textContent = b;
        }
-           console.log(a, b, sign);
+
            return;
    }
-console.log(4)
+
    if (action.includes(key)){
-       console.log(4)
+
        sign = key;
 
        out.textContent = sign;
@@ -72,7 +72,7 @@ console.log(4)
                a = a - b;
                break;
            case "*":
-               console.log (1);
+
                a = a * b;
 
                break;
